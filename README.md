@@ -15,6 +15,7 @@ Holistic detection (tracking face, eye and hand) with an excel output
 ![Yourvideo](https://user-images.githubusercontent.com/83806848/183409231-fbd4a0fe-7798-4e42-9ee7-19f86f857223.jpg)
 1. A screenshot of the static picture with face, eye and hand tracking
 2. On the left top corner, it shows the fps of current frame
+3. If anything covers the face, the estimate tracking of the face and eye might not be that accurate
 
 ### pose_landmarks
 1. x and y: Landmark coordinates normalized to [0.0, 1.0] by the image width and height respectively.
