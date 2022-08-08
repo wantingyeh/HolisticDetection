@@ -10,6 +10,32 @@ Holistic detection (tracking face, eye and hand) with an excel output
 1. face_eye_hand_detection_excel.py --> The main python script
 2. Yourvideo.csv --> An example of the export csv file
 
+-----------------------------------------------------
+# environment setting
+Before running the script
+1. Anaconda prompt
+2. conda create -n mediapipe python=3.8
+3. conda activate mediapipe
+
+# installation
+Install these dependencies (mediapipe, opencv, numpy, pandas):
+
+```shell
+pip install mediapipe
+pip install opencv-python
+pip install numpy
+pip install pandas
+```
+# run the code
+python face_eye_hand_detection_excle.py
+
+`note: this script can only run for one video. For more videos, it should be written in loop`
+
+## change the variables
+VIDEO_PATH = "Yourvideo.mp4"  `change video name in the current path`
+path_image = "Yourvideo"             `create a folder to put the ouput images in the current patch`
+outputfile_csv = "Yourvideo.csv"     `create a csv file to store the ouptut values`
+
 ## output
 ### static pictures
 ![Yourvideo](https://user-images.githubusercontent.com/83806848/183409231-fbd4a0fe-7798-4e42-9ee7-19f86f857223.jpg)
