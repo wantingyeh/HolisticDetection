@@ -5,18 +5,16 @@ import pandas as pd
 import uuid
 import os
 
-#tutorial: https://github.com/nicknochnack/Full-Body-Estimation-using-Media-Pipe-Holistic/blob/main/Media%20Pipe%20Holistic%20Tutorial.ipynb
-#save excel: https://qiita.com/Esp-v2/items/9c671ad29a263ce3675e
-#save excel: https://pastebin.com/BA4E1fAF
-
 #### purpose: detect the face, eye, posture and hands using mediapipe holisitic
-### getting the values of eye region, face region and hand region to determine a peekaboo phase
+### getting the values of eye region, face region and hand region
+### Automatically capture the static pictures with skeleton frame-by-frame
+### Produce an excel output for x, y, z coordinate for each region frame-by-frame
 
 # set path and output files
 
-VIDEO_PATH = "DIME_004_DG_PB_T10_inf.mp4"
-path_image = "test_PB_T10_inf_2"
-outputfile_csv = "test_PB_T10_inf_2.csv"
+VIDEO_PATH = "Yourvideo.mp4"
+path_image = "Yourvideo"
+outputfile_csv = "Yourvideo_output.csv"
 
 
 ## create a folder for saving pics
@@ -99,8 +97,6 @@ with mp_holistic.Holistic(
         .get_default_hand_landmarks_style())
 
     #  storing the values from the results
-    ## problem: the output is not frame-by-frame
-    ## problem: the output is not listed accordingly to FACS output
       data_holisitc = {}
       if results.face_landmarks: 
         for i in range(len(pose_face)):
